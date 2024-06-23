@@ -115,7 +115,9 @@ const Login = ({navigation}: any) => {
                 onPress={() => setIsPasswordShown(!isPasswordShown)}
               />
             </View>
-            <TouchableOpacity style={styles.button2}>
+            <TouchableOpacity
+              style={styles.button2}
+              onPress={() => navigation.navigate('Home')}>
               <Text style={{color: '#fff', fontSize: 20, textAlign: 'center'}}>
                 Sign In
               </Text>
