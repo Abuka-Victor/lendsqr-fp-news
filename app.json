@@ -1,4 +1,7 @@
 {
   "name": "Lendsqr",
-  "displayName": "Lendsqr"
+  "displayName": "Lendsqr",
+  "packagerOpts": {
+    "config": "metro.config.js"
+  }
 }
