@@ -12,6 +12,7 @@ import Login from './screens/Login';
 import Signup from './screens/Signup';
 import Detail from './screens/Detail';
 import HomeHeader from './components/HomeHeader';
+import CustomDrawerContent from './components/CustomDrawer';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +22,9 @@ const TopTab = createMaterialTopTabNavigator();
 
 function MyDrawer() {
   return (
-    <Drawer.Navigator screenOptions={{headerShown: false}}>
+    <Drawer.Navigator
+      screenOptions={{headerShown: false}}
+      drawerContent={props => <CustomDrawerContent {...props} />}>
       <Drawer.Screen name="Feed" component={MyTabs} />
       <Drawer.Screen name="Article" component={Home} />
     </Drawer.Navigator>

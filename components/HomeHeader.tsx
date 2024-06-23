@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import {IconOutline} from '@ant-design/icons-react-native';
 import {useNavigation} from '@react-navigation/native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const HomeHeader = () => {
   const navigation = useNavigation();
@@ -16,26 +17,15 @@ const HomeHeader = () => {
         alignItems: 'center',
       }}>
       <IconOutline
-        name="search"
+        name="bars"
         size={24}
-        onPress={() => navigation.navigate('Explore')}
+        onPress={() => navigation.openDrawer()}
       />
       <Text style={{color: '#000'}}>NEWS</Text>
-      <View
-        style={{
-          width: 'auto',
-          height: 'auto',
-          backgroundColor: '#000',
-          padding: 5,
-          borderRadius: 100,
-        }}>
-        <IconOutline
-          name="user"
-          size={24}
-          color="#fff"
-          onPress={() => navigation.navigate('Profile')}
-        />
-      </View>
+
+      <TouchableOpacity onPress={() => {}}>
+        <IconOutline name="bell" size={24} color="#000" />
+      </TouchableOpacity>
     </View>
   );
 };

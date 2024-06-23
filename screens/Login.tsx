@@ -104,7 +104,7 @@ const Login = ({navigation}: any) => {
               <IconOutline name="lock" size={24} />
               <TextInput
                 style={{flex: 1, paddingLeft: 10}}
-                secureTextEntry={isPasswordShown}
+                secureTextEntry={!isPasswordShown}
                 placeholder="Password"
                 onChangeText={setPassword}
                 value={password}
