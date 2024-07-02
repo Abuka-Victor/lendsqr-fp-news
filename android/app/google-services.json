@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "380985026197",
+    "project_id": "lendsqr-fp-news-fa2b6",
+    "storage_bucket": "lendsqr-fp-news-fa2b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380985026197:android:6535e8bcc2181b0a3c9d9c",
+        "android_client_info": {
+          "package_name": "com.awesomelettersnewsvictor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380985026197-27n8978va6e4idk96jt3kv4r9id7hk5l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.awesomelettersnewsvictor",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "380985026197-vphtl5vhqn15bbd551fh72ds2p7081k6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4OQ8YO89tQgVpJvrfSqlux-Y23KIh_Do"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380985026197-vphtl5vhqn15bbd551fh72ds2p7081k6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "380985026197-5pn5p58smqhq2cidref4knutvn3nbefq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.Lendsqr6319824"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

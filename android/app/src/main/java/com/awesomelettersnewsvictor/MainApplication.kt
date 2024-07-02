@@ -1,4 +1,4 @@
-package com.lendsqr
+package com.awesomelettersnewsvictor
 
 import android.app.Application
 import com.facebook.react.PackageList

@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* LendsqrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* LendsqrTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-Lendsqr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Lendsqr.a */; };
+		00E356F31AD99517003FC87E /* AwesomeLettersNewsVictorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AwesomeLettersNewsVictorTests.m */; };
+		0C80B921A6F3F58F76C31292 /* libPods-AwesomeLettersNewsVictor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-AwesomeLettersNewsVictor.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-Lendsqr-LendsqrTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Lendsqr-LendsqrTests.a */; };
+		7699B88040F8A987B510C191 /* libPods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		3B99E5FF73494142BB2081DE /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE42E501513749B1B153A1CE /* antfill.ttf */; };
-		448C8A6143464A1AA6040B33 /* antoutline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 470C30DEDD6B4C4A87B45E77 /* antoutline.ttf */; };
+		5F81B77050B840DBA1337FFB /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F02E23B0E4B407592DD3FBB /* antfill.ttf */; };
+		192F247BC57247C0BA3E6CC1 /* antoutline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA0477E148DD42B0B5A09BA6 /* antoutline.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,31 +24,31 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Lendsqr;
+			remoteInfo = AwesomeLettersNewsVictor;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* LendsqrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LendsqrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* AwesomeLettersNewsVictorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeLettersNewsVictorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* LendsqrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LendsqrTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Lendsqr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lendsqr.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Lendsqr/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Lendsqr/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Lendsqr/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Lendsqr/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Lendsqr/main.m; sourceTree = "<group>"; };
-		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = Lendsqr/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Lendsqr-LendsqrTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lendsqr-LendsqrTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-Lendsqr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lendsqr.debug.xcconfig"; path = "Target Support Files/Pods-Lendsqr/Pods-Lendsqr.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-Lendsqr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lendsqr.release.xcconfig"; path = "Target Support Files/Pods-Lendsqr/Pods-Lendsqr.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-Lendsqr-LendsqrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lendsqr-LendsqrTests.debug.xcconfig"; path = "Target Support Files/Pods-Lendsqr-LendsqrTests/Pods-Lendsqr-LendsqrTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-Lendsqr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lendsqr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Lendsqr/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-Lendsqr-LendsqrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lendsqr-LendsqrTests.release.xcconfig"; path = "Target Support Files/Pods-Lendsqr-LendsqrTests/Pods-Lendsqr-LendsqrTests.release.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* AwesomeLettersNewsVictorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeLettersNewsVictorTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* AwesomeLettersNewsVictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeLettersNewsVictor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AwesomeLettersNewsVictor/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = AwesomeLettersNewsVictor/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AwesomeLettersNewsVictor/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AwesomeLettersNewsVictor/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AwesomeLettersNewsVictor/main.m; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = AwesomeLettersNewsVictor/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4392A12AC88292D35C810B /* Pods-AwesomeLettersNewsVictor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeLettersNewsVictor.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeLettersNewsVictor/Pods-AwesomeLettersNewsVictor.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-AwesomeLettersNewsVictor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeLettersNewsVictor.release.xcconfig"; path = "Target Support Files/Pods-AwesomeLettersNewsVictor/Pods-AwesomeLettersNewsVictor.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-AwesomeLettersNewsVictor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeLettersNewsVictor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AwesomeLettersNewsVictor/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.release.xcconfig"; path = "Target Support Files/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		DE42E501513749B1B153A1CE /* antfill.ttf */ = {isa = PBXFileReference; name = "antfill.ttf"; path = "../node_modules/@ant-design/icons-react-native/fonts/antfill.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		470C30DEDD6B4C4A87B45E77 /* antoutline.ttf */ = {isa = PBXFileReference; name = "antoutline.ttf"; path = "../node_modules/@ant-design/icons-react-native/fonts/antoutline.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5F02E23B0E4B407592DD3FBB /* antfill.ttf */ = {isa = PBXFileReference; name = "antfill.ttf"; path = "../node_modules/@ant-design/icons-react-native/fonts/antfill.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FA0477E148DD42B0B5A09BA6 /* antoutline.ttf */ = {isa = PBXFileReference; name = "antoutline.ttf"; path = "../node_modules/@ant-design/icons-react-native/fonts/antoutline.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-Lendsqr-LendsqrTests.a in Frameworks */,
+				7699B88040F8A987B510C191 /* libPods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,20 +64,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-Lendsqr.a in Frameworks */,
+				0C80B921A6F3F58F76C31292 /* libPods-AwesomeLettersNewsVictor.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* LendsqrTests */ = {
+		00E356EF1AD99517003FC87E /* AwesomeLettersNewsVictorTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* LendsqrTests.m */,
+				00E356F21AD99517003FC87E /* AwesomeLettersNewsVictorTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = LendsqrTests;
+			path = AwesomeLettersNewsVictorTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -88,7 +88,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Lendsqr */ = {
+		13B07FAE1A68108700A75B9A /* AwesomeLettersNewsVictor */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -99,15 +99,15 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 			);
-			name = Lendsqr;
+			name = AwesomeLettersNewsVictor;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-Lendsqr.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-Lendsqr-LendsqrTests.a */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-AwesomeLettersNewsVictor.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,13 +122,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* Lendsqr */,
+				13B07FAE1A68108700A75B9A /* AwesomeLettersNewsVictor */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* LendsqrTests */,
+				00E356EF1AD99517003FC87E /* AwesomeLettersNewsVictorTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				14DCB09750FA4E8BB8A04950 /* Resources */,
+				C6B70B9DF22440BA8FD42DF8 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,8 +138,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Lendsqr.app */,
-				00E356EE1AD99517003FC87E /* LendsqrTests.xctest */,
+				13B07F961A680F5B00A75B9A /* AwesomeLettersNewsVictor.app */,
+				00E356EE1AD99517003FC87E /* AwesomeLettersNewsVictorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,19 +147,19 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-Lendsqr.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-Lendsqr.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-Lendsqr-LendsqrTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-Lendsqr-LendsqrTests.release.xcconfig */,
+				3B4392A12AC88292D35C810B /* Pods-AwesomeLettersNewsVictor.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-AwesomeLettersNewsVictor.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		14DCB09750FA4E8BB8A04950 /* Resources */ = {
+		C6B70B9DF22440BA8FD42DF8 /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				DE42E501513749B1B153A1CE /* antfill.ttf */,
-				470C30DEDD6B4C4A87B45E77 /* antoutline.ttf */,
+				5F02E23B0E4B407592DD3FBB /* antfill.ttf */,
+				FA0477E148DD42B0B5A09BA6 /* antoutline.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -168,9 +168,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* LendsqrTests */ = {
+		00E356ED1AD99517003FC87E /* AwesomeLettersNewsVictorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "LendsqrTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AwesomeLettersNewsVictorTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -184,14 +184,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = LendsqrTests;
-			productName = LendsqrTests;
-			productReference = 00E356EE1AD99517003FC87E /* LendsqrTests.xctest */;
+			name = AwesomeLettersNewsVictorTests;
+			productName = AwesomeLettersNewsVictorTests;
+			productReference = 00E356EE1AD99517003FC87E /* AwesomeLettersNewsVictorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Lendsqr */ = {
+		13B07F861A680F5B00A75B9A /* AwesomeLettersNewsVictor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Lendsqr" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AwesomeLettersNewsVictor" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -205,9 +205,9 @@
 			);
 			dependencies = (
 			);
-			name = Lendsqr;
-			productName = Lendsqr;
-			productReference = 13B07F961A680F5B00A75B9A /* Lendsqr.app */;
+			name = AwesomeLettersNewsVictor;
+			productName = AwesomeLettersNewsVictor;
+			productReference = 13B07F961A680F5B00A75B9A /* AwesomeLettersNewsVictor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Lendsqr" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AwesomeLettersNewsVictor" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -240,8 +240,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Lendsqr */,
-				00E356ED1AD99517003FC87E /* LendsqrTests */,
+				13B07F861A680F5B00A75B9A /* AwesomeLettersNewsVictor */,
+				00E356ED1AD99517003FC87E /* AwesomeLettersNewsVictorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,8 +260,8 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				3B99E5FF73494142BB2081DE /* antfill.ttf in Resources */,
-				448C8A6143464A1AA6040B33 /* antoutline.ttf in Resources */,
+				5F81B77050B840DBA1337FFB /* antfill.ttf in Resources */,
+				192F247BC57247C0BA3E6CC1 /* antoutline.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,15 +290,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lendsqr/Pods-Lendsqr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor/Pods-AwesomeLettersNewsVictor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lendsqr/Pods-Lendsqr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor/Pods-AwesomeLettersNewsVictor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lendsqr/Pods-Lendsqr-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor/Pods-AwesomeLettersNewsVictor-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
@@ -316,7 +316,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Lendsqr-LendsqrTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -338,7 +338,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Lendsqr-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AwesomeLettersNewsVictor-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -351,15 +351,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lendsqr-LendsqrTests/Pods-Lendsqr-LendsqrTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lendsqr-LendsqrTests/Pods-Lendsqr-LendsqrTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lendsqr-LendsqrTests/Pods-Lendsqr-LendsqrTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -368,15 +368,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lendsqr/Pods-Lendsqr-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor/Pods-AwesomeLettersNewsVictor-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lendsqr/Pods-Lendsqr-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor/Pods-AwesomeLettersNewsVictor-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lendsqr/Pods-Lendsqr-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor/Pods-AwesomeLettersNewsVictor-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -385,15 +385,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lendsqr-LendsqrTests/Pods-Lendsqr-LendsqrTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lendsqr-LendsqrTests/Pods-Lendsqr-LendsqrTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lendsqr-LendsqrTests/Pods-Lendsqr-LendsqrTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests/Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -403,7 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* LendsqrTests.m in Sources */,
+				00E356F31AD99517003FC87E /* AwesomeLettersNewsVictorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +421,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Lendsqr */;
+			target = 13B07F861A680F5B00A75B9A /* AwesomeLettersNewsVictor */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -429,14 +429,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-Lendsqr-LendsqrTests.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = LendsqrTests/Info.plist;
+				INFOPLIST_FILE = AwesomeLettersNewsVictorTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,17 +450,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lendsqr.app/Lendsqr";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeLettersNewsVictor.app/AwesomeLettersNewsVictor";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-Lendsqr-LendsqrTests.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-AwesomeLettersNewsVictor-AwesomeLettersNewsVictorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = LendsqrTests/Info.plist;
+				INFOPLIST_FILE = AwesomeLettersNewsVictorTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,19 +474,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lendsqr.app/Lendsqr";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeLettersNewsVictor.app/AwesomeLettersNewsVictor";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-Lendsqr.debug.xcconfig */;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-AwesomeLettersNewsVictor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Lendsqr/Info.plist;
+				INFOPLIST_FILE = AwesomeLettersNewsVictor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,7 +498,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Lendsqr;
+				PRODUCT_NAME = AwesomeLettersNewsVictor;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -507,12 +507,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-Lendsqr.release.xcconfig */;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-AwesomeLettersNewsVictor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = Lendsqr/Info.plist;
+				INFOPLIST_FILE = AwesomeLettersNewsVictor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,7 +524,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Lendsqr;
+				PRODUCT_NAME = AwesomeLettersNewsVictor;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -672,7 +672,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "LendsqrTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AwesomeLettersNewsVictorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -681,7 +681,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Lendsqr" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AwesomeLettersNewsVictor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -690,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Lendsqr" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AwesomeLettersNewsVictor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

@@ -1,9 +1,35 @@
 import React from 'react';
 import {IconFill, IconOutline} from '@ant-design/icons-react-native';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import auth from '@react-native-firebase/auth';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import {useAppDispatch, useAppSelector} from '../redux/hooks';
+import {removeUser} from '../redux/user.slice';
+import {removeNews} from '../redux/news.slice';
 
 function CustomDrawerContent({navigation}) {
+  const dispatch = useAppDispatch();
+  const {user} = useAppSelector(state => state.user);
+
+  const handleSignOut = () => {
+    AsyncStorage.removeItem('news').then(() => {
+      dispatch(removeNews());
+      auth()
+        .signOut()
+        .then(() => {
+          dispatch(removeUser());
+          console.log('User signed out!');
+        });
+      GoogleSignin.signOut()
+        .then(() => {})
+        .catch(err => {
+          console.log(err);
+        });
+    });
+  };
+
   return (
     <View
       style={{
@@ -181,27 +207,47 @@ function CustomDrawerContent({navigation}) {
         </View>
       </View>
       <View style={{flexDirection: 'row', marginTop: 20, alignItems: 'center'}}>
-        <View
-          style={{
-            width: 30,
-            height: 30,
-            backgroundColor: '#000',
-            borderRadius: 100,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <IconOutline
-            name="user"
-            size={20}
-            color="#fff"
-            onPress={() => navigation.navigate('Profile')}
-          />
-        </View>
+        {user?.photoURL === null ? (
+          <View
+            style={{
+              width: 30,
+              height: 30,
+              backgroundColor: '#000',
+              borderRadius: 100,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <IconOutline
+              name="user"
+              size={20}
+              color="#fff"
+              onPress={() => navigation.navigate('Profile')}
+            />
+          </View>
+        ) : (
+          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+            <Image
+              src={user?.photoURL as string}
+              style={{
+                objectFit: 'contain',
+                width: 40,
+                height: 40,
+                borderRadius: 99,
+              }}
+            />
+          </TouchableOpacity>
+        )}
+
         <View style={{flex: 1, marginLeft: 10}}>
-          <Text>User Name</Text>
-          <Text>username@email.com</Text>
+          <Text>{user?.displayName}</Text>
+          <Text>{user?.email}</Text>
         </View>
-        <IconOutline name="logout" size={24} />
+        <TouchableOpacity
+          onPress={() => {
+            handleSignOut();
+          }}>
+          <IconOutline name="logout" size={24} />
+        </TouchableOpacity>
       </View>
     </View>
   );

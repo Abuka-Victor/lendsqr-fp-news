@@ -1,6 +1,6 @@
 {
-  "name": "Lendsqr",
-  "displayName": "Lendsqr",
+  "name": "AwesomeLettersNewsVictor",
+  "displayName": "AwesomeLettersNewsVictor",
   "packagerOpts": {
     "config": "metro.config.js"
   }

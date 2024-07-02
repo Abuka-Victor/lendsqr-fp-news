@@ -1,5 +1,5 @@
 {
-  "name": "Lendsqr",
+  "name": "AwesomeLettersNewsVictor",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,8 +11,14 @@
   },
   "dependencies": {
     "@ant-design/icons-react-native": "^2.3.2",
+    "@react-native-async-storage/async-storage": "^1.23.1",
+    "@react-native-firebase/analytics": "^20.1.0",
     "@react-native-firebase/app": "^20.1.0",
     "@react-native-firebase/auth": "^20.1.0",
+    "@react-native-firebase/crashlytics": "^20.1.0",
+    "@react-native-firebase/messaging": "^20.1.0",
+    "@react-native-firebase/perf": "^20.1.0",
+    "@react-native-firebase/remote-config": "^20.1.0",
     "@react-native-google-signin/google-signin": "^12.2.1",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/drawer": "^6.6.15",
@@ -20,6 +26,7 @@
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.9.26",
     "@reduxjs/toolkit": "^2.2.5",
+    "axios": "^1.7.2",
     "react": "18.2.0",
     "react-native": "0.74.2",
     "react-native-asset": "^2.1.1",

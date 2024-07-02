@@ -9,21 +9,104 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
   Keyboard,
+  ScrollView,
+  Alert,
 } from 'react-native';
-import Svg, {Path, G} from 'react-native-svg';
-import {IconFill, IconOutline} from '@ant-design/icons-react-native';
+import {IconOutline} from '@ant-design/icons-react-native';
+import auth from '@react-native-firebase/auth';
+import {
+  GoogleSignin,
+  isErrorWithCode,
+  statusCodes,
+} from '@react-native-google-signin/google-signin';
 
-const {width, height} = Dimensions.get('screen');
+const {width} = Dimensions.get('screen');
 
-const Login = ({navigation}: any) => {
+const Signup = ({navigation}: any) => {
   const [isKeyBoardShown, setIsKeyBoardShown] = useState(false);
   const [isPasswordShown, setIsPasswordShown] = useState(false);
   const [isConfirmPasswordShown, setIsConfirmPasswordShown] = useState(false);
   const [isValidEmail, setIsValidEmail] = useState(false);
+  const [passwordMatch, setPasswordMatch] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
+  const handleSignUp = () => {
+    if (passwordMatch && email && password) {
+      auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          console.log('User account created & signed in!');
+        })
+        .catch(error => {
+          if (error.code === 'auth/email-already-in-use') {
+            Alert.alert('That email address is already in use!');
+          }
+
+          if (error.code === 'auth/invalid-email') {
+            Alert.alert('That email address is invalid!');
+          }
+
+          if (error.code === 'auth/weak-password') {
+            Alert.alert(
+              'The given password is too weak. Password should be at least 6 characters',
+            );
+          }
+
+          console.error(error);
+        });
+    } else {
+      Alert.alert('Please fix errors before proceeding');
+    }
+  };
+
+  async function onGoogleButtonPress() {
+    try {
+      // Check if your device supports Google Play
+      await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+      // Get the users ID token
+      const {idToken} = await GoogleSignin.signIn();
+
+      // Create a Google credential with the token
+      const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+
+      // Sign-in the user with the credential
+      return auth().signInWithCredential(googleCredential);
+    } catch (error) {
+      console.log(error);
+      if (isErrorWithCode(error)) {
+        switch (error.code) {
+          case statusCodes.NO_SAVED_CREDENTIAL_FOUND:
+            // Android and Apple only. No saved credential found, try calling `createAccount`
+            console.log('No saved credential found');
+            break;
+          case statusCodes.SIGN_IN_CANCELLED:
+            console.log('Sign In Cancelled');
+            // sign in was cancelled
+            break;
+          case statusCodes.ONE_TAP_START_FAILED:
+            console.log('One Tap start failed');
+            // Android and Web only, you probably have hit rate limiting.
+            // On Android, you can still call `presentExplicitSignIn` in this case.
+            // On the web, user needs to click the `WebGoogleSigninButton` to sign in.
+            break;
+          case statusCodes.PLAY_SERVICES_NOT_AVAILABLE:
+            console.log('Play services not available');
+            // Android-only: play services not available or outdated
+            // Web: when calling an unimplemented api (requestAuthorization)
+            break;
+          default:
+          // something else happened
+        }
+      } else {
+        // an error that's not related to google sign in occurred
+        console.log('Something else');
+      }
+    }
+  }
 
   useEffect(() => {
     const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
@@ -38,6 +121,14 @@ const Login = ({navigation}: any) => {
       hideSubscription.remove();
     };
   }, []);
+
+  useEffect(() => {
+    if (confirmPassword === password) {
+      setPasswordMatch(true);
+    } else {
+      setPasswordMatch(false);
+    }
+  }, [confirmPassword, password]);
 
   const validateEmail = email => {
     return String(email)
@@ -72,7 +163,10 @@ const Login = ({navigation}: any) => {
           Sign Up
         </Text>
       </View>
-      <View style={styles.contentContainer}>
+      <ScrollView
+        style={{flex: 1}}
+        contentContainerStyle={styles.contentContainer}
+        showsVerticalScrollIndicator={false}>
         <KeyboardAvoidingView behavior="height">
           <View>
             <View style={styles.inputContainer}>
@@ -82,7 +176,16 @@ const Login = ({navigation}: any) => {
                 placeholder="Full Name"
                 onChangeText={setName}
                 value={name}
-                autoFocus={true}
+              />
+            </View>
+            <View style={styles.inputContainer}>
+              <IconOutline name="phone" size={24} />
+              <TextInput
+                style={{flex: 1, paddingLeft: 10}}
+                placeholder="Phone Number"
+                keyboardType="number-pad"
+                onChangeText={setNumber}
+                value={number}
               />
             </View>
             <View style={styles.inputContainer}>
@@ -118,7 +221,7 @@ const Login = ({navigation}: any) => {
               <IconOutline name="lock" size={24} />
               <TextInput
                 style={{flex: 1, paddingLeft: 10}}
-                secureTextEntry={isPasswordShown}
+                secureTextEntry={isConfirmPasswordShown}
                 placeholder="Confirm Password"
                 onChangeText={setConfirmPassword}
                 value={confirmPassword}
@@ -131,7 +234,11 @@ const Login = ({navigation}: any) => {
                 }
               />
             </View>
-            <TouchableOpacity style={styles.button2}>
+            <Text
+              style={{color: 'red', display: passwordMatch ? 'none' : 'flex'}}>
+              Passwords do not match
+            </Text>
+            <TouchableOpacity style={styles.button2} onPress={handleSignUp}>
               <Text style={{color: '#fff', fontSize: 20, textAlign: 'center'}}>
                 Sign Up
               </Text>
@@ -139,7 +246,13 @@ const Login = ({navigation}: any) => {
           </View>
         </KeyboardAvoidingView>
         <View style={styles.bar} />
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() =>
+            onGoogleButtonPress().then(() =>
+              console.log('Signed in with Google!'),
+            )
+          }>
           <View
             style={{
               flexDirection: 'row',
@@ -160,7 +273,7 @@ const Login = ({navigation}: any) => {
             <Text style={{color: '#518eef'}}>Sign In</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </ScrollView>
     </ImageBackground>
   );
 };
@@ -172,11 +285,11 @@ const styles = StyleSheet.create({
     objectFit: 'cover',
   },
   contentContainer: {
-    flex: 0.7,
     alignItems: 'center',
-    // justifyContent: 'center',
+    justifyContent: 'center',
     backgroundColor: '#fff',
     position: 'relative',
+    paddingBottom: 50,
   },
   inputContainer: {
     flexDirection: 'row',
@@ -213,4 +326,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default Signup;

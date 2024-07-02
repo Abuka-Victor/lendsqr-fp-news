@@ -9,9 +9,16 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
   Keyboard,
+  Alert,
 } from 'react-native';
-import Svg, {Path, G} from 'react-native-svg';
-import {IconFill, IconOutline} from '@ant-design/icons-react-native';
+import Svg, {Path} from 'react-native-svg';
+import {IconOutline} from '@ant-design/icons-react-native';
+import auth from '@react-native-firebase/auth';
+import {
+  GoogleSignin,
+  isErrorWithCode,
+  statusCodes,
+} from '@react-native-google-signin/google-signin';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -21,6 +28,71 @@ const Login = ({navigation}: any) => {
   const [isValidEmail, setIsValidEmail] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  GoogleSignin.configure({
+    webClientId:
+      '380985026197-vphtl5vhqn15bbd551fh72ds2p7081k6.apps.googleusercontent.com',
+  });
+
+  async function onGoogleButtonPress() {
+    try {
+      // Check if your device supports Google Play
+      await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+      // Get the users ID token
+      const {idToken} = await GoogleSignin.signIn();
+
+      // Create a Google credential with the token
+      const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+
+      // Sign-in the user with the credential
+      return auth().signInWithCredential(googleCredential);
+    } catch (error) {
+      console.log(error);
+      if (isErrorWithCode(error)) {
+        switch (error.code) {
+          case statusCodes.NO_SAVED_CREDENTIAL_FOUND:
+            // Android and Apple only. No saved credential found, try calling `createAccount`
+            console.log('No saved credential found');
+            break;
+          case statusCodes.SIGN_IN_CANCELLED:
+            console.log('Sign In Cancelled');
+            // sign in was cancelled
+            break;
+          case statusCodes.ONE_TAP_START_FAILED:
+            console.log('One Tap start failed');
+            // Android and Web only, you probably have hit rate limiting.
+            // On Android, you can still call `presentExplicitSignIn` in this case.
+            // On the web, user needs to click the `WebGoogleSigninButton` to sign in.
+            break;
+          case statusCodes.PLAY_SERVICES_NOT_AVAILABLE:
+            console.log('Play services not available');
+            // Android-only: play services not available or outdated
+            // Web: when calling an unimplemented api (requestAuthorization)
+            break;
+          default:
+          // something else happened
+        }
+      } else {
+        // an error that's not related to google sign in occurred
+        console.log('Something else');
+      }
+    }
+  }
+
+  const handleSignIn = () => {
+    if (email && password) {
+      auth()
+        .signInWithEmailAndPassword(email, password)
+        .then(() => {
+          console.log('User signed in with email and password!');
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    } else {
+      Alert.alert('Please fix errors before proceeding');
+    }
+  };
 
   useEffect(() => {
     const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
@@ -36,8 +108,10 @@ const Login = ({navigation}: any) => {
     };
   }, []);
 
-  const validateEmail = email => {
-    return String(email)
+  const validateEmail: (
+    emailAddress: string,
+  ) => RegExpMatchArray | null = emailAddress => {
+    return String(emailAddress)
       .toLowerCase()
       .match(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -115,9 +189,7 @@ const Login = ({navigation}: any) => {
                 onPress={() => setIsPasswordShown(!isPasswordShown)}
               />
             </View>
-            <TouchableOpacity
-              style={styles.button2}
-              onPress={() => navigation.navigate('Home')}>
+            <TouchableOpacity style={styles.button2} onPress={handleSignIn}>
               <Text style={{color: '#fff', fontSize: 20, textAlign: 'center'}}>
                 Sign In
               </Text>
@@ -125,7 +197,13 @@ const Login = ({navigation}: any) => {
           </View>
         </KeyboardAvoidingView>
         <View style={styles.bar} />
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() =>
+            onGoogleButtonPress().then(() =>
+              console.log('Signed in with Google!'),
+            )
+          }>
           <View
             style={{
               flexDirection: 'row',
